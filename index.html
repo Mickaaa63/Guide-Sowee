@@ -19,13 +19,7 @@
             --white: #ffffff;
             --shadow: 0 4px 20px rgba(0, 51, 102, 0.08);
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
             background: var(--bg-light);
@@ -34,27 +28,22 @@
             display: flex;
             min-height: 100vh;
         }
-
-        /* ========== SIDEBAR ========== */
         .sidebar {
             width: 280px;
             background: linear-gradient(180deg, var(--edf-blue) 0%, var(--edf-blue-dark) 100%);
             color: white;
             position: fixed;
-            top: 0;
-            left: 0;
+            top: 0; left: 0;
             height: 100vh;
             display: flex;
             flex-direction: column;
             z-index: 100;
             box-shadow: 4px 0 20px rgba(0,0,0,0.15);
         }
-
         .sidebar-header {
             padding: 28px 24px 20px;
             border-bottom: 1px solid rgba(255,255,255,0.1);
         }
-
         .sidebar-header h1 {
             font-size: 1.05rem;
             font-weight: 700;
@@ -62,18 +51,8 @@
             margin-bottom: 4px;
             line-height: 1.3;
         }
-
-        .sidebar-header p {
-            font-size: 0.85rem;
-            opacity: 0.75;
-        }
-
-        .nav {
-            flex: 1;
-            padding: 20px 0;
-            overflow-y: auto;
-        }
-
+        .sidebar-header p { font-size: 0.85rem; opacity: 0.75; }
+        .nav { flex: 1; padding: 20px 0; overflow-y: auto; }
         .nav-item {
             display: flex;
             align-items: center;
@@ -87,59 +66,36 @@
             border-left: 4px solid transparent;
             cursor: pointer;
         }
-
-        .nav-item:hover {
-            background: rgba(255,255,255,0.08);
-            color: white;
-        }
-
+        .nav-item:hover { background: rgba(255,255,255,0.08); color: white; }
         .nav-item.active {
             background: rgba(230, 92, 0, 0.2);
             border-left-color: var(--sowee-orange);
             color: white;
         }
-
-        .nav-item .icon {
-            font-size: 1.2rem;
-            width: 24px;
-            text-align: center;
-        }
-
+        .nav-item .icon { font-size: 1.2rem; width: 24px; text-align: center; }
         .sidebar-footer {
             padding: 16px 24px;
             font-size: 0.75rem;
             opacity: 0.6;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
-
-        /* ========== MAIN CONTENT ========== */
         .main {
             margin-left: 280px;
             flex: 1;
             padding: 40px 48px 80px;
             max-width: 960px;
         }
-
-        .section {
-            display: none;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .section.active {
-            display: block;
-        }
-
+        .section { display: none; animation: fadeIn 0.3s ease; }
+        .section.active { display: block; }
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(8px); }
             to { opacity: 1; transform: translateY(0); }
         }
-
         .section-header {
             margin-bottom: 32px;
             padding-bottom: 16px;
             border-bottom: 3px solid var(--sowee-orange);
         }
-
         .section-header h2 {
             font-size: 1.9rem;
             color: var(--edf-blue);
@@ -148,14 +104,7 @@
             align-items: center;
             gap: 12px;
         }
-
-        .section-header p {
-            color: var(--text-muted);
-            margin-top: 6px;
-            font-size: 1rem;
-        }
-
-        /* Cards */
+        .section-header p { color: var(--text-muted); margin-top: 6px; font-size: 1rem; }
         .card {
             background: var(--white);
             border-radius: 12px;
@@ -164,7 +113,6 @@
             box-shadow: var(--shadow);
             border: 1px solid var(--border);
         }
-
         .card h3 {
             color: var(--edf-blue);
             font-size: 1.15rem;
@@ -173,34 +121,9 @@
             align-items: center;
             gap: 8px;
         }
-
-        .card p, .card li {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .card ul {
-            padding-left: 20px;
-            margin-top: 8px;
-        }
-
-        .card li {
-            margin-bottom: 6px;
-        }
-
-        /* Placeholder style */
-        .placeholder {
-            background: var(--sowee-orange-soft);
-            border: 2px dashed var(--sowee-orange);
-            border-radius: 10px;
-            padding: 20px;
-            color: var(--sowee-orange);
-            font-style: italic;
-            text-align: center;
-            font-size: 0.95rem;
-        }
-
-        /* Links */
+        .card p, .card li { color: var(--text-muted); font-size: 0.95rem; }
+        .card ul { padding-left: 20px; margin-top: 8px; }
+        .card li { margin-bottom: 6px; }
         a.link {
             color: var(--edf-blue-light);
             text-decoration: none;
@@ -208,13 +131,7 @@
             border-bottom: 1px solid transparent;
             transition: border-color 0.2s;
         }
-
-        a.link:hover {
-            border-bottom-color: var(--edf-blue-light);
-            color: var(--sowee-orange);
-        }
-
-        /* Buttons */
+        a.link:hover { border-bottom-color: var(--edf-blue-light); color: var(--sowee-orange); }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -230,27 +147,12 @@
             border: none;
             cursor: pointer;
         }
-
-        .btn:hover {
-            background: var(--sowee-orange-light);
-            transform: translateY(-1px);
-        }
-
-        .btn-secondary {
-            background: var(--edf-blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--edf-blue-light);
-        }
-
-        /* Grid for links */
+        .btn:hover { background: var(--sowee-orange-light); transform: translateY(-1px); }
         .links-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
             gap: 16px;
         }
-
         .link-card {
             background: var(--white);
             border: 1px solid var(--border);
@@ -261,49 +163,13 @@
             color: inherit;
             display: block;
         }
-
         .link-card:hover {
             border-color: var(--sowee-orange);
             box-shadow: 0 6px 20px rgba(230, 92, 0, 0.12);
             transform: translateY(-2px);
         }
-
-        .link-card h4 {
-            color: var(--edf-blue);
-            font-size: 1rem;
-            margin-bottom: 4px;
-        }
-
-        .link-card p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* Table style */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 12px;
-            font-size: 0.92rem;
-        }
-
-        th, td {
-            padding: 12px 14px;
-            text-align: left;
-            border-bottom: 1px solid var(--border);
-        }
-
-        th {
-            background: var(--edf-blue);
-            color: white;
-            font-weight: 600;
-        }
-
-        tr:hover {
-            background: #f0f5fa;
-        }
-
-        /* Objection style */
+        .link-card h4 { color: var(--edf-blue); font-size: 1rem; margin-bottom: 4px; }
+        .link-card p { font-size: 0.85rem; color: var(--text-muted); }
         .objection {
             border-left: 4px solid var(--sowee-orange);
             background: var(--white);
@@ -312,33 +178,95 @@
             border-radius: 0 10px 10px 0;
             box-shadow: var(--shadow);
         }
-
-        .objection strong {
+        .objection strong { color: var(--edf-blue); display: block; margin-bottom: 6px; }
+        .tuto-step { display: flex; gap: 18px; margin-bottom: 16px; align-items: flex-start; }
+        .tuto-number {
+            flex-shrink: 0;
+            width: 32px; height: 32px;
+            background: var(--sowee-orange);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.95rem;
+        }
+        .tuto-content h4 { color: var(--edf-blue); font-size: 1rem; margin-bottom: 4px; }
+        .tuto-content p { color: var(--text-muted); font-size: 0.92rem; margin-bottom: 6px; }
+        .tuto-tip {
+            background: var(--sowee-orange-soft);
+            border-left: 3px solid var(--sowee-orange);
+            padding: 10px 14px;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            margin-top: 10px;
+        }
+        .accordion {
+            margin-bottom: 12px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+        .accordion-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            cursor: pointer;
+            background: var(--white);
+            transition: background 0.2s;
+            user-select: none;
+        }
+        .accordion-header:hover { background: #f8fafc; }
+        .accordion-header h3 {
+            margin: 0;
+            font-size: 1.05rem;
+            color: var(--edf-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .accordion-header .chevron {
+            font-size: 1.2rem;
+            transition: transform 0.25s ease;
+            color: var(--sowee-orange);
+        }
+        .accordion.open .accordion-header .chevron { transform: rotate(180deg); }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .accordion.open .accordion-body { max-height: 2200px; }
+        .accordion-content { padding: 0 20px 20px; border-top: 1px solid var(--border); }
+        .soncase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 14px;
+        }
+        .soncase-card {
+            background: var(--bg-light);
+            border-radius: 8px;
+            padding: 14px;
+            border-left: 4px solid var(--sowee-orange);
+        }
+        .soncase-card strong {
             color: var(--edf-blue);
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
         }
-
-        /* Responsive */
+        .soncase-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
         @media (max-width: 800px) {
-            .sidebar {
-                width: 100%;
-                height: auto;
-                position: relative;
-            }
-            .main {
-                margin-left: 0;
-                padding: 24px 20px 60px;
-            }
-            body {
-                flex-direction: column;
-            }
-            .nav {
-                display: flex;
-                flex-wrap: wrap;
-                gap: 4px;
-                padding: 12px;
-            }
+            .sidebar { width: 100%; height: auto; position: relative; }
+            .main { margin-left: 0; padding: 24px 20px 60px; }
+            body { flex-direction: column; }
+            .nav { display: flex; flex-wrap: wrap; gap: 4px; padding: 12px; }
             .nav-item {
                 flex: 1 1 40%;
                 border-left: none;
@@ -347,95 +275,53 @@
                 padding: 12px;
                 font-size: 0.85rem;
             }
-            .nav-item.active {
-                background: var(--sowee-orange);
-            }
+            .nav-item.active { background: var(--sowee-orange); }
         }
-
-        /* Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #c1c9d2;
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #a0aab4;
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #c1c9d2; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a0aab4; }
     </style>
 </head>
 <body>
-
-    <!-- ========== SIDEBAR ========== -->
     <aside class="sidebar">
         <div class="sidebar-header">
             <h1>Guide général du Thermostat Connecté Sowee by EDF</h1>
             <p>Accès rapide • EDF</p>
         </div>
-
         <nav class="nav">
-            <a class="nav-item active" data-section="technique">
-                <span class="icon">🔧</span>
-                Technique
-            </a>
-            <a class="nav-item" data-section="liens">
-                <span class="icon">🔗</span>
-                Liens utiles
-            </a>
-            <a class="nav-item" data-section="parcours">
-                <span class="icon">🗺️</span>
-                Parcours conseillers / clients
-            </a>
-            <a class="nav-item" data-section="objections">
-                <span class="icon">💬</span>
-                Objections
-            </a>
-            <a class="nav-item" data-section="bases">
-                <span class="icon">📚</span>
-                Les bases
-            </a>
+            <a class="nav-item active" data-section="technique"><span class="icon">🔧</span> Technique</a>
+            <a class="nav-item" data-section="liens"><span class="icon">🔗</span> Liens utiles</a>
+            <a class="nav-item" data-section="parcours"><span class="icon">🗺️</span> Parcours conseillers / clients</a>
+            <a class="nav-item" data-section="objections"><span class="icon">💬</span> Objections</a>
+            <a class="nav-item" data-section="bases"><span class="icon">📚</span> Les bases</a>
+            <a class="nav-item" data-section="tutoriel"><span class="icon">📱</span> Tutoriel</a>
+            <a class="nav-item" data-section="vente"><span class="icon">🎯</span> Technique de vente</a>
         </nav>
-
-        <div class="sidebar-footer">
-            Version 1.0 • Mis à jour par Mickaël
-        </div>
+        <div class="sidebar-footer">Version 1.1 • Mis à jour par Mickaël</div>
     </aside>
 
-    <!-- ========== MAIN CONTENT ========== -->
     <main class="main">
-
-        <!-- ===== TECHNIQUE ===== -->
+        <!-- TECHNIQUE -->
         <section id="technique" class="section active">
             <div class="section-header">
                 <h2>🔧 Technique</h2>
                 <p>Guides, procédures et informations techniques Sowee</p>
             </div>
-
             <div class="card">
                 <h3>📌 Installation & Mise en service élec'</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">
-                    Guide étape par étape pour l’installation d’un thermostat connecté Sowee avec radiateurs électriques.
-                </p>
+                <p style="margin-bottom: 16px; color: var(--text-muted);">Guide étape par étape pour l’installation d’un thermostat connecté Sowee avec radiateurs électriques.</p>
                 <ul style="margin-bottom: 18px; color: var(--text-muted); padding-left: 20px;">
                     <li>Matériel nécessaire</li>
                     <li>Branchement des modules relais</li>
                     <li>Positionnement de la Station</li>
                     <li>Configuration de la programmation</li>
                 </ul>
-                <a href="https://edfonline-my.sharepoint.com/:p:/g/personal/mickael-m_feyfeux_edf_fr/IQCQrACmRdVtQqiWfwDjB-y2AYgKxULY6qVByaNJTGzBuys" class="btn" target="_blank">
-                    📥 Ouvrir / Télécharger le guide PowerPoint
-                </a>
+                <a href="https://edfonline-my.sharepoint.com/:p:/g/personal/mickael-m_feyfeux_edf_fr/IQCQrACmRdVtQqiWfwDjB-y2AYgKxULY6qVByaNJTGzBuys" class="btn" target="_blank">📥 Ouvrir / Télécharger le guide PowerPoint</a>
             </div>
-
             <div class="card">
                 <h3>📌 Installation & Mise en service gaz</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">
-                    Guide technique pour l’installation d’un thermostat connecté Sowee sur une chaudière gaz.
-                </p>
+                <p style="margin-bottom: 16px; color: var(--text-muted);">Guide technique pour l’installation d’un thermostat connecté Sowee sur une chaudière gaz.</p>
                 <ul style="margin-bottom: 18px; color: var(--text-muted); padding-left: 20px;">
                     <li>Matériel nécessaire</li>
                     <li>Branchement du module relais</li>
@@ -443,134 +329,95 @@
                     <li>Appairage relais / station</li>
                     <li>Configuration de la programmation</li>
                 </ul>
-                <a href="https://edfonline-my.sharepoint.com/:p:/g/personal/mickael-m_feyfeux_edf_fr/IQDGi1sXlMt-TpUdYA-XcxnaAUAio_Pj1TnkKyU8dR-fgog" class="btn" target="_blank">
-                    📥 Ouvrir / Télécharger le guide PowerPoint
-                </a>
+                <a href="https://edfonline-my.sharepoint.com/:p:/g/personal/mickael-m_feyfeux_edf_fr/IQDGi1sXlMt-TpUdYA-XcxnaAUAio_Pj1TnkKyU8dR-fgog" class="btn" target="_blank">📥 Ouvrir / Télécharger le guide PowerPoint</a>
             </div>
         </section>
 
-        <!-- ===== LIENS UTILES ===== -->
+        <!-- LIENS -->
         <section id="liens" class="section">
             <div class="section-header">
                 <h2>🔗 Liens utiles</h2>
                 <p>Tous les accès rapides dont tu as besoin en appel</p>
             </div>
-
             <div class="links-grid">
-                <a href="https://www.sowee.fr/channel/edfom" class="link-card" target="_blank">
-                    <h4>Souscription</h4>
-                    <p>Portail de souscription Sowee</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=UQYX9EfnB90" class="link-card" target="_blank">
-                    <h4>La Station</h4>
-                    <p>Découvrez la Station Sowee sous toutes ses coutures</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=YlHk0h5Qqfc" class="link-card" target="_blank">
-                    <h4>Sowee élec'</h4>
-                    <p>Installation de la Station Sowee pour votre chauffage élec'</p>
-                </a>
-                <a href="https://www.youtube.com/watch?v=_LdN3_iderg" class="link-card" target="_blank">
-                    <h4>Sowee gaz</h4>
-                    <p>Installation de la Station Sowee pour votre chauffage gaz</p>
-                </a>
+                <a href="https://www.sowee.fr/channel/edfom" class="link-card" target="_blank"><h4>Souscription</h4><p>Portail de souscription Sowee</p></a>
+                <a href="https://www.youtube.com/watch?v=UQYX9EfnB90" class="link-card" target="_blank"><h4>La Station</h4><p>Découvrez la Station Sowee sous toutes ses coutures</p></a>
+                <a href="https://www.youtube.com/watch?v=YlHk0h5Qqfc" class="link-card" target="_blank"><h4>Sowee élec'</h4><p>Installation de la Station Sowee pour votre chauffage élec'</p></a>
+                <a href="https://www.youtube.com/watch?v=_LdN3_iderg" class="link-card" target="_blank"><h4>Sowee gaz</h4><p>Installation de la Station Sowee pour votre chauffage gaz</p></a>
             </div>
-
             <div class="card" style="margin-top: 28px;">
                 <h3>Autres ressources</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">
-                    Outil de calcul des tarifs et arguments commerciaux Sowee (promo 2026).
-                </p>
-                <a href="https://edfonline-my.sharepoint.com/:x:/g/personal/mickael-m_feyfeux_edf_fr/IQC2FYtIjE--RbK2ce-ZnyxaATYWkQpdWr7GfeGTnx3OsZc" class="btn" target="_blank">
-                    📥 Calculette Sowee Promo 2026
-                </a>
+                <p style="margin-bottom: 16px; color: var(--text-muted);">Outil de calcul des tarifs et arguments commerciaux Sowee (promo 2026).</p>
+                <a href="https://edfonline-my.sharepoint.com/:x:/g/personal/mickael-m_feyfeux_edf_fr/IQC2FYtIjE--RbK2ce-ZnyxaATYWkQpdWr7GfeGTnx3OsZc" class="btn" target="_blank">📥 Calculette Sowee Promo 2026</a>
             </div>
         </section>
 
-        <!-- ===== PARCOURS ===== -->
+        <!-- PARCOURS -->
         <section id="parcours" class="section">
             <div class="section-header">
                 <h2>🗺️ Parcours conseillers / clients</h2>
                 <p>Les chemins à suivre selon le profil et la situation</p>
             </div>
-
             <div class="card">
                 <h3>Parcours Conseiller</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">
-                    Ce que tu vois côté conseiller
-                </p>
-                <a href="https://edf.mayday.fr/desk/default/knowledges/63bea4ab0d7de070247fd6d7/contents/678f6b51a4c6eb462297b4bf" class="btn" target="_blank">
-                    🗺️ Ouvrir le parcours conseiller
-                </a>
+                <p style="margin-bottom: 16px; color: var(--text-muted);">Ce que tu vois côté conseiller</p>
+                <a href="https://edf.mayday.fr/desk/default/knowledges/63bea4ab0d7de070247fd6d7/contents/678f6b51a4c6eb462297b4bf" class="btn" target="_blank">🗺️ Ouvrir le parcours conseiller</a>
             </div>
-
             <div class="card">
                 <h3>Parcours Client</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">
-                    Ce que voit le client
-                </p>
-                <a href="https://edf.mayday.fr/desk/default/knowledges/63bea4ab0d7de070247fd6d7/contents/678f6b59296691c6a355cead" class="btn" target="_blank">
-                    🗺️ Ouvrir le parcours client
-                </a>
+                <p style="margin-bottom: 16px; color: var(--text-muted);">Ce que voit le client</p>
+                <a href="https://edf.mayday.fr/desk/default/knowledges/63bea4ab0d7de070247fd6d7/contents/678f6b59296691c6a355cead" class="btn" target="_blank">🗺️ Ouvrir le parcours client</a>
             </div>
         </section>
 
-        <!-- ===== OBJECTIONS ===== -->
+        <!-- OBJECTIONS -->
         <section id="objections" class="section">
             <div class="section-header">
                 <h2>💬 Objections</h2>
                 <p>Réponses types aux objections fréquentes</p>
             </div>
-
             <div class="card" style="border-left: 4px solid var(--sowee-orange);">
                 <h3>Méthode AREF – À ne pas oublier</h3>
                 <ul style="padding-left: 20px; color: var(--text-muted); margin-top: 10px;">
-                    <li style="margin-bottom: 10px;"><strong>Amortir :</strong> Accueillir sans jugement, éviter le réflexe de contre-argument, écouter activement et créer un climat de confiance. Noter et montrer le point de vue du client.</li>
-                    <li style="margin-bottom: 10px;"><strong>Rebondir :</strong> Clarifier le besoin réel, reformuler pour vérifier la bonne compréhension et préparer l’argumentaire.</li>
-                    <li style="margin-bottom: 10px;"><strong>Enchaîner :</strong> Répondre de manière ciblée et pertinente à l’objection identifiée. Apporter des preuves, bénéfices, ajustements personnalisés, sans « sur-argumenter ».</li>
-                    <li style="margin-bottom: 10px;"><strong>Feedback :</strong> Vérifier si le client est convaincu, reformuler éventuellement un accord, valider l’adhésion ou la prochaine étape, avec une question type : « Qu’en pensez-vous ? ».</li>
+                    <li style="margin-bottom: 10px;"><strong>Amortir :</strong> Accueillir sans jugement, éviter le réflexe de contre-argument, écouter activement et créer un climat de confiance.</li>
+                    <li style="margin-bottom: 10px;"><strong>Rebondir :</strong> Clarifier le besoin réel, reformuler pour vérifier la bonne compréhension.</li>
+                    <li style="margin-bottom: 10px;"><strong>Enchaîner :</strong> Répondre de manière ciblée et pertinente. Apporter des preuves, bénéfices, sans « sur-argumenter ».</li>
+                    <li style="margin-bottom: 10px;"><strong>Feedback :</strong> Vérifier si le client est convaincu avec une question type : « Qu’en pensez-vous ? ».</li>
                 </ul>
             </div>
-
             <div class="objection">
                 <strong>Objection : « C’est trop cher »</strong>
                 Il vous permet de baisser vos consommations, de mieux maîtriser votre budget. Le coût de la location est rapidement amorti grâce aux économies réalisées.
             </div>
-
             <div class="objection">
                 <strong>Objection : « J’ai déjà un thermostat »</strong>
                 Je comprends, simplement avec le thermostat connecté Sowee by EDF, vous bénéficiez d’avantages supplémentaires :
                 <ul style="margin-top: 8px; padding-left: 20px;">
                     <li>Un pilotage par le budget : vous fixez vous-même le montant maximum que vous voulez dépenser par mois.</li>
-                    <li>Vos températures sont adaptables pièce par pièce, vous les programmez en une seule fois selon vos habitudes de consommation, grâce au planning de chauffe.</li>
-                    <li>Le thermostat connecté détecte aussi vos absences ! Il abaisse ou éteint votre chauffage pour plus d’économies.</li>
+                    <li>Vos températures sont adaptables pièce par pièce grâce au planning de chauffe.</li>
+                    <li>Le thermostat connecté détecte aussi vos absences !</li>
                 </ul>
             </div>
-
             <div class="objection">
                 <strong>Objection : « C’est compliqué à installer / utiliser »</strong>
-                Rassurez-vous, nous vous enverrons un technicien spécialisé le jour de l’installation, et vous n’avez rien à payer ! De plus, l’application est très simple et intuitive, pas besoin d’être un geek !
+                Rassurez-vous, nous vous enverrons un technicien spécialisé le jour de l’installation, et vous n’avez rien à payer ! L’application est très simple et intuitive.
             </div>
-
             <div class="objection" style="opacity: 0.75; border-left-color: #aaa;">
                 <strong>Soyez patient, d’autres objections arrivent ;)</strong>
                 Cette section sera complétée prochainement.
             </div>
         </section>
 
-        <!-- ===== BASES ===== -->
+        <!-- BASES -->
         <section id="bases" class="section">
             <div class="section-header">
                 <h2>📚 Les bases</h2>
                 <p>Les fondamentaux à connaître absolument</p>
             </div>
-
             <div class="card">
                 <h3>Qu’est-ce que Sowee ?</h3>
-                <p style="color: var(--text-muted);">
-                    L’équipement qui permet au client de faire des économies, et qui peut transformer un appel conflictuel en une très sat !
-                </p>
+                <p style="color: var(--text-muted);">L’équipement qui permet au client de faire des économies, et qui peut transformer un appel conflictuel en une très sat !</p>
             </div>
-
             <div class="card">
                 <h3>Argumentaire commercial</h3>
                 <ul style="padding-left: 20px; color: var(--text-muted);">
@@ -580,39 +427,189 @@
                     <li style="margin-bottom: 8px;">Un des produits les plus puissants du marché, avec un coût extrêmement bas</li>
                 </ul>
             </div>
-
             <div class="card">
                 <h3>Points de vigilance</h3>
                 <ul style="padding-left: 20px; color: var(--text-muted);">
-                    <li style="margin-bottom: 8px;">Vérifier la compatibilité avec les équipements (Fil pilote pour les radiateurs électriques et la compatibilité avec la chaudière pour le gaz)</li>
-                    <li style="margin-bottom: 8px;">Toujours demander au client s’il aura un accès Wi-Fi chez lui avant même de proposer le Thermostat pour éviter de perdre du temps</li>
-                    <li style="margin-bottom: 8px;">Ne pas proposer au client si c’est un logement social</li>
+                    <li style="margin-bottom: 8px;">Vérifier la compatibilité (Fil pilote pour élec’ / compatibilité chaudière pour gaz)</li>
+                    <li style="margin-bottom: 8px;">Toujours demander s’il y a un accès Wi-Fi avant de proposer</li>
+                    <li style="margin-bottom: 8px;">Ne pas proposer si c’est un logement social</li>
                 </ul>
             </div>
         </section>
 
+        <!-- TUTORIEL -->
+        <section id="tutoriel" class="section">
+            <div class="section-header">
+                <h2>📱 Tutoriel</h2>
+                <p>Guides pas à pas de l’application Sowee by EDF – cliquez pour déplier</p>
+            </div>
+
+            <div class="accordion open">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>💰 Mode Budget (Priorité Budget)</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">Le <strong>Mode Budget</strong> permet de fixer un plafond mensuel. La Station adapte le programme de chauffe et envoie des alertes en cas de risque de dépassement.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Ouvrir l’application</h4><p>Lancez l’appli Sowee by EDF et connectez-vous avec les identifiants du client.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Aller dans l’onglet « Programmes »</h4><p>Sélectionnez l’onglet Programmes (menu bas ou principal).</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Activer la Priorité Budget</h4><p>Cliquez sur <strong>Priorité Budget</strong> (activable en 1 clic). Choisissez entre Priorité Confort ou Priorité Budget.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">4</div><div class="tuto-content"><h4>Définir le budget mensuel</h4><p>Indiquez le montant max souhaité (€). L’appli estime le budget en fonction du programme, de la météo et des consos passées.</p><div class="tuto-tip">💡 Le budget doit être cohérent avec le logement. Trop bas = températures trop basses → insatisfaction.</div></div></div>
+                        <div class="tuto-step"><div class="tuto-number">5</div><div class="tuto-content"><h4>Gérer les alertes</h4><p>En cas de vague de froid : le client peut <strong>maintenir le budget</strong> (températures baissées) ou <strong>ajuster le budget</strong> (priorité confort).</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">6</div><div class="tuto-content"><h4>Suivre les économies</h4><p>Programmes → « Vos économies » pour visualiser l’impact.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>📅 Création du programme de chauffe</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">Le programme définit les températures selon les moments de la journée. Pour l’élec’, un programme par pièce.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Onglet Programmes</h4><p>Allez dans Programmes → Mon planning (ou Créer mon programme).</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Questionnaire d’initialisation</h4><p>Répondez aux questions sur les habitudes de vie. L’appli génère un planning de base.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Définir les 3 températures de référence</h4><p>Par défaut : Jour / Travail (ou Absence) / Nuit. Ajustez selon le confort souhaité.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">4</div><div class="tuto-content"><h4>Ajuster les plages horaires</h4><p>Modifiez les créneaux pour chaque jour. Vous pouvez dupliquer un jour sur les autres.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">5</div><div class="tuto-content"><h4>Valider et activer</h4><p>Enregistrez. Pour l’élec’, répétez pièce par pièce ou dupliquez un programme.</p><div class="tuto-tip">💡 Astuce : utilisez le « Boost salle de bain » pour une hausse temporaire le matin.</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>🧳 Mode Absence</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">Pour les absences planifiées (week-end, vacances). Le chauffage passe en mode économie et reprend pour le retour.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Accéder au Mode Absence</h4><p>Depuis l’écran d’accueil / Pilotage ou via le menu rapide.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Activer et choisir les dates</h4><p>Indiquez la date de départ et la date de retour. Le chauffage baisse immédiatement.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Reprise automatique</h4><p>La Station anticipe le retour pour que le logement soit à la bonne température à l’arrivée.</p><div class="tuto-tip">💡 Vous pouvez modifier la date de retour à distance en un clic.</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>👀 Détection automatique d’absence</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">La Station détecte qu’une pièce est inoccupée alors que le programme est en mode confort. Elle vous alerte pour baisser le chauffage.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Où l’activer ?</h4><p>Onglet Programmes → Paramètres avancés → Détection automatique d’absence.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Activer l’option</h4><p>Basculez le curseur sur « Activé ». Vous recevrez une notification quand une absence est détectée.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Réagir à l’alerte</h4><p>Depuis la notif, vous pouvez baisser la température en un clic ou ignorer. Vous restez maître de la décision.</p><div class="tuto-tip">💡 Activée 2 semaines en hiver, cette fonction peut représenter jusqu’à ~5 % d’économies supplémentaires.</div></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>⏱️ Anticipation de chauffe</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">La Station apprend les caractéristiques du logement et démarre le chauffage en avance pour atteindre la température exacte à l’heure prévue.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Où l’activer ?</h4><p>Onglet Programmes → Paramètres avancés → Anticipation de chauffe.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Activer l’option</h4><p>Activez le curseur. La Station calcule le temps nécessaire et démarre en conséquence.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Résultat</h4><p>À l’heure prévue, la pièce est déjà à la bonne température, sans avoir chauffé trop tôt ni trop tard.</p></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>❄️ Mode hors-gel par pièce</h3>
+                    <span class="chevron">▼</span>
+                </div>
+                <div class="accordion-body">
+                    <div class="accordion-content">
+                        <p style="color: var(--text-muted); margin-bottom: 16px;">Pour les pièces inoccupées (chambre d’amis, bureau vide, garde alternée…). Maintenez 7°C au lieu de chauffer inutilement.</p>
+                        <div class="tuto-step"><div class="tuto-number">1</div><div class="tuto-content"><h4>Accéder à la pièce</h4><p>Onglet Pilotage → sélectionnez la pièce concernée.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">2</div><div class="tuto-content"><h4>Activer le hors-gel</h4><p>Choisissez le mode hors-gel (7°C). La pièce reste protégée du gel sans consommer comme une pièce occupée.</p></div></div>
+                        <div class="tuto-step"><div class="tuto-number">3</div><div class="tuto-content"><h4>Revenir au programme normal</h4><p>Quand la pièce redevient occupée, repassez simplement sur le programme de chauffe habituel.</p><div class="tuto-tip">💡 Idéal pour garde alternée, bureau secondaire ou chambre d’amis rarement utilisée.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TECHNIQUE DE VENTE -->
+        <section id="vente" class="section">
+            <div class="section-header">
+                <h2>🎯 Technique de vente</h2>
+                <p>Méthodes pour argumenter efficacement le Thermostat Sowee by EDF</p>
+            </div>
+
+            <div class="card">
+                <h3>📌 Méthode BAC (Bénéfice – Avantage – Caractéristique)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 14px;">On part du client (ce qu’il gagne) plutôt que du produit. Structurez toujours votre argument ainsi :</p>
+                <ul style="padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 10px;"><strong>B – Bénéfice</strong> : ce que le client va ressentir / obtenir concrètement (« Vous maîtrisez votre facture et évitez les mauvaises surprises »).</li>
+                    <li style="margin-bottom: 10px;"><strong>A – Avantage</strong> : pourquoi notre solution le permet mieux (« Grâce au pilotage par le budget, la Station ajuste automatiquement les températures »).</li>
+                    <li style="margin-bottom: 10px;"><strong>C – Caractéristique</strong> : la preuve technique (« Vous fixez un plafond mensuel dans l’appli, et vous recevez une alerte en cas de risque de dépassement »).</li>
+                </ul>
+                <div class="tuto-tip">💡 Exemple Sowee : « Vous évitez une régularisation élevée (B). Le thermostat détecte vos absences et baisse le chauffage tout seul (A). Activation en 1 clic dans l’appli + technicien offert (C). »</div>
+            </div>
+
+            <div class="card">
+                <h3>📌 Méthode SONCASE – Adapter l’argumentaire au profil client</h3>
+                <p style="color: var(--text-muted); margin-bottom: 12px;">Identifiez le levier dominant du client pendant la découverte, puis ciblez votre argumentaire dessus.</p>
+                <div class="soncase-grid">
+                    <div class="soncase-card"><strong>S – Sécurité</strong><p>Éviter les régularisations, installation pro incluse, technicien gratuit, service client EDF.</p></div>
+                    <div class="soncase-card"><strong>O – Orgueil</strong><p>« Un des produits les plus puissants du marché », pilotage intelligent, innovation EDF.</p></div>
+                    <div class="soncase-card"><strong>N – Nouveauté</strong><p>Station connectée, détection d’absence, anticipation de chauffe, appli intuitive.</p></div>
+                    <div class="soncase-card"><strong>C – Confort</strong><p>Température idéale pièce par pièce, pilotage à distance, reprise auto au retour.</p></div>
+                    <div class="soncase-card"><strong>A – Argent</strong><p>Jusqu’à 15 % d’économies, coût de location très bas, amortissement rapide, mode Budget.</p></div>
+                    <div class="soncase-card"><strong>S – Sympathie</strong><p>Relation de confiance, technicien qui vient chez vous, accompagnement simple.</p></div>
+                    <div class="soncase-card"><strong>E – Environnement</strong><p>Moins de gaspi, chauffage uniquement quand nécessaire, réduction de l’empreinte carbone.</p></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h3>📌 Combiner CAP + SONCASE</h3>
+                <p style="color: var(--text-muted); margin-bottom: 12px;">Une fois le profil SONCASE identifié, construisez l’argument avec CAP (Caractéristique → Avantage → Preuve) adapté au levier.</p>
+                <ul style="padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 8px;"><strong>Profil Argent</strong> : « Vous fixez un budget mensuel (C) → la Station s’adapte pour ne pas le dépasser (A) → jusqu’à 15 % d’économies (P). »</li>
+                    <li style="margin-bottom: 8px;"><strong>Profil Confort</strong> : « Pilotage pièce par pièce + anticipation de chauffe (C) → température idéale pile à l’heure (A) → plus jamais de maison froide au retour (P). »</li>
+                    <li style="margin-bottom: 8px;"><strong>Profil Sécurité</strong> : « Installation par un technicien + mode Budget (C) → plus de risque de régularisation surprise (A) → vous gardez le contrôle total (P). »</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>📌 Rappels pratiques en appel</h3>
+                <ul style="padding-left: 20px; color: var(--text-muted);">
+                    <li style="margin-bottom: 8px;">Toujours commencer par la découverte (questions ouvertes) pour repérer le levier SONCASE dominant.</li>
+                    <li style="margin-bottom: 8px;">Utiliser la méthode AREF pour les objections (onglet Objections).</li>
+                    <li style="margin-bottom: 8px;">Finir par une question de validation : « Qu’en pensez-vous ? »</li>
+                    <li style="margin-bottom: 8px;">Ne jamais proposer si logement social ou absence de Wi-Fi.</li>
+                </ul>
+            </div>
+        </section>
     </main>
 
     <script>
-        // Navigation entre sections
         const navItems = document.querySelectorAll('.nav-item');
         const sections = document.querySelectorAll('.section');
-
         navItems.forEach(item => {
             item.addEventListener('click', () => {
-                // Retirer active de tous
                 navItems.forEach(n => n.classList.remove('active'));
                 sections.forEach(s => s.classList.remove('active'));
-
-                // Activer le cliqué
                 item.classList.add('active');
-                const target = item.getAttribute('data-section');
-                document.getElementById(target).classList.add('active');
-
-                // Scroll en haut
+                document.getElementById(item.getAttribute('data-section')).classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
         });
+        function toggleAccordion(header) {
+            const accordion = header.parentElement;
+            accordion.classList.toggle('open');
+        }
     </script>
 </body>
 </html>
