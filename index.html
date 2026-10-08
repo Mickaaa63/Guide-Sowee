@@ -263,6 +263,204 @@
             font-size: 0.95rem;
         }
         .soncase-card p { font-size: 0.85rem; color: var(--text-muted); margin: 0; }
+        /* Calculette */
+        .calc-tabs {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .calc-tab {
+            flex: 1;
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            background: var(--bg-light);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        .calc-tab.active {
+            border-color: var(--sowee-orange);
+            background: var(--sowee-orange-soft);
+            color: var(--edf-blue);
+        }
+        .calc-panel { display: none; }
+        .calc-panel.active { display: block; }
+        .calc-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+        }
+        .calc-row label {
+            font-weight: 600;
+            color: var(--edf-blue);
+            min-width: 220px;
+            font-size: 0.92rem;
+        }
+        .calc-input {
+            width: 110px;
+            padding: 10px 12px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: center;
+            color: var(--edf-blue);
+        }
+        .calc-input.wide { width: 140px; }
+        .calc-input:focus {
+            outline: none;
+            border-color: var(--sowee-orange);
+        }
+        .calc-toggle {
+            display: flex;
+            gap: 8px;
+        }
+        .calc-toggle button {
+            padding: 10px 18px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: white;
+            font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-muted);
+        }
+        .calc-toggle button.active {
+            border-color: var(--sowee-orange);
+            background: var(--sowee-orange);
+            color: white;
+        }
+        .calc-result {
+            background: linear-gradient(135deg, var(--edf-blue) 0%, var(--edf-blue-dark) 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 18px 22px;
+            margin-top: 6px;
+            text-align: center;
+        }
+        .calc-result .price {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .calc-result .price span {
+            font-size: 1rem;
+            font-weight: 500;
+            opacity: 0.85;
+        }
+        .calc-result .detail {
+            margin-top: 6px;
+            font-size: 0.88rem;
+            opacity: 0.85;
+        }
+        .calc-note {
+            margin-top: 12px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.45;
+        }
+        .calc-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 16px;
+        }
+        .calc-stat {
+            background: var(--bg-light);
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 4px solid var(--sowee-orange);
+        }
+        .calc-stat.green { border-left-color: #16a34a; }
+        .calc-stat.blue { border-left-color: var(--edf-blue-light); }
+        .calc-stat .label {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+        .calc-stat .value {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--edf-blue);
+        }
+        .calc-stat .value.positive { color: #16a34a; }
+        .calc-mensu {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-top: 14px;
+        }
+        .calc-mensu-box {
+            background: white;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+        .calc-mensu-box .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+        .calc-mensu-box .value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--edf-blue);
+        }
+        .calc-mensu-box.highlight {
+            border-color: var(--sowee-orange);
+            background: var(--sowee-orange-soft);
+        }
+        .calc-prop {
+            margin-top: 18px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px 18px;
+            background: #fafbfc;
+            font-size: 0.88rem;
+            color: var(--text-dark);
+            line-height: 1.55;
+        }
+        .calc-prop strong { color: var(--edf-blue); }
+        .calc-prop .eco { color: #16a34a; font-weight: 600; }
+        .calc-prop .cout { color: var(--sowee-orange); font-weight: 600; }
+        .calc-prop .warning {
+            color: #b91c1c;
+            font-size: 0.82rem;
+            margin-top: 10px;
+            display: block;
+        }
+        .calc-check {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+            margin-bottom: 4px;
+        }
+        .calc-check input {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--sowee-orange);
+            cursor: pointer;
+        }
+        .calc-check label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            cursor: pointer;
+            min-width: auto;
+            font-weight: 500;
+        }
+        @media (max-width: 600px) {
+            .calc-stats, .calc-mensu { grid-template-columns: 1fr; }
+            .calc-row label { min-width: 100%; }
+        }
         @media (max-width: 800px) {
             .sidebar { width: 100%; height: auto; position: relative; }
             .main { margin-left: 0; padding: 24px 20px 60px; }
@@ -300,7 +498,7 @@
             <a class="nav-item" data-section="vente"><span class="icon">🎯</span> Technique de vente</a>
             <a class="nav-item" data-section="news"><span class="icon">🏆</span> News</a>
         </nav>
-        <div class="sidebar-footer">Version 1.4 • Mis à jour par Mickaël</div>
+        <div class="sidebar-footer">Version 1.6 • Mis à jour par Mickaël</div>
     </aside>
 
     <main class="main">
@@ -348,9 +546,140 @@
                 <a href="https://www.youtube.com/watch?v=_LdN3_iderg" class="link-card" target="_blank"><h4>Sowee gaz</h4><p>Installation de la Station Sowee pour votre chauffage gaz</p></a>
             </div>
             <div class="card" style="margin-top: 28px;">
-                <h3>Autres ressources</h3>
-                <p style="margin-bottom: 16px; color: var(--text-muted);">Outil de calcul des tarifs et arguments commerciaux Sowee.</p>
-                <a href="https://edfonline-my.sharepoint.com/:x:/g/personal/mickael-m_feyfeux_edf_fr/IQCaZXHtKmo0TrUBUJxMU3wPASDD33-rtMPwLawMtJki8do?e=LFH4hW" class="btn" target="_blank">📥 Calculette Sowee 2026</a>
+                <h3>💰 Calculette Sowee 2026</h3>
+                <p style="margin-bottom: 18px; color: var(--text-muted);">Prix de location + estimation des économies (jusqu’à 15 %) et mensualisation ajustée.</p>
+
+                <div class="calc-tabs">
+                    <button class="calc-tab active" data-calc="elec" onclick="switchCalc('elec')">⚡ Électricité</button>
+                    <button class="calc-tab" data-calc="gaz" onclick="switchCalc('gaz')">🔥 Gaz</button>
+                </div>
+
+                <!-- ========== PANEL ÉLECTRICITÉ ========== -->
+                <div id="calc-elec" class="calc-panel active">
+                    <div class="calc-row">
+                        <label for="annuel-elec">Montant annuel facture élec’ (hors AD-PF)</label>
+                        <input type="number" id="annuel-elec" class="calc-input wide" min="0" step="50" value="3000" oninput="calcElec()">
+                        <span style="color:var(--text-muted);font-size:0.9rem;">€</span>
+                    </div>
+                    <div class="calc-row">
+                        <label for="nb-radiateurs">Nombre de radiateurs à équiper</label>
+                        <input type="number" id="nb-radiateurs" class="calc-input" min="1" max="30" value="2" oninput="calcElec()">
+                    </div>
+                    <div class="calc-row">
+                        <label>Option Effacement</label>
+                        <div class="calc-toggle">
+                            <button type="button" id="eff-oui" class="active" onclick="setEffacement(true)">Avec</button>
+                            <button type="button" id="eff-non" onclick="setEffacement(false)">Sans</button>
+                        </div>
+                    </div>
+                    <div class="calc-check">
+                        <input type="checkbox" id="mes-elec" onchange="calcElec()">
+                        <label for="mes-elec">Mise en service uniquement → appliquer −10 % sur la mensualisation</label>
+                    </div>
+
+                    <div class="calc-result">
+                        <div class="price" id="prix-elec">6,90 <span>€/mois</span></div>
+                        <div class="detail" id="detail-elec">2 radiateurs avec Effacement</div>
+                    </div>
+
+                    <div class="calc-stats">
+                        <div class="calc-stat green">
+                            <div class="label">Économie max annuelle (15 %)</div>
+                            <div class="value positive" id="eco15-elec">450,00 €</div>
+                        </div>
+                        <div class="calc-stat">
+                            <div class="label">Coût annuel du thermostat</div>
+                            <div class="value" id="cout-annuel-elec">82,80 €</div>
+                        </div>
+                        <div class="calc-stat green">
+                            <div class="label">Économie nette annuelle</div>
+                            <div class="value positive" id="eco-nette-elec">367,20 €</div>
+                        </div>
+                        <div class="calc-stat blue">
+                            <div class="label">Économie nette mensuelle</div>
+                            <div class="value" id="eco-mens-elec">30,60 €</div>
+                        </div>
+                    </div>
+
+                    <div class="calc-mensu">
+                        <div class="calc-mensu-box">
+                            <div class="label">Mensualisation sans Sowee</div>
+                            <div class="value" id="mensu-sans-elec">250,00 €</div>
+                        </div>
+                        <div class="calc-mensu-box highlight">
+                            <div class="label">Mensualisation avec Sowee</div>
+                            <div class="value" id="mensu-avec-elec">225,00 €</div>
+                        </div>
+                    </div>
+
+                    <div class="calc-prop" id="prop-elec">
+                        <!-- généré en JS -->
+                    </div>
+
+                    <p class="calc-note">
+                        Base 2 radiateurs : <strong>6,90 €</strong> avec Effacement / <strong>9,90 €</strong> sans. + <strong>1,50 €</strong>/radiateur suppl. Installation pro incluse.
+                    </p>
+                </div>
+
+                <!-- ========== PANEL GAZ ========== -->
+                <div id="calc-gaz" class="calc-panel">
+                    <div class="calc-row">
+                        <label for="annuel-gaz">Montant annuel facture gaz (hors AD-PF)</label>
+                        <input type="number" id="annuel-gaz" class="calc-input wide" min="0" step="50" value="2300" oninput="calcGaz()">
+                        <span style="color:var(--text-muted);font-size:0.9rem;">€</span>
+                    </div>
+                    <div class="calc-row">
+                        <label for="nb-tetes">Nb de têtes thermostatiques (pilotage avancé)</label>
+                        <input type="number" id="nb-tetes" class="calc-input" min="0" max="30" value="0" oninput="calcGaz()">
+                    </div>
+                    <div class="calc-check">
+                        <input type="checkbox" id="mes-gaz" onchange="calcGaz()">
+                        <label for="mes-gaz">Mise en service uniquement → appliquer −10 % sur la mensualisation</label>
+                    </div>
+
+                    <div class="calc-result">
+                        <div class="price" id="prix-gaz">9,90 <span>€/mois</span></div>
+                        <div class="detail" id="detail-gaz">Station gaz seule (sans tête supplémentaire)</div>
+                    </div>
+
+                    <div class="calc-stats">
+                        <div class="calc-stat green">
+                            <div class="label">Économie max annuelle (15 %)</div>
+                            <div class="value positive" id="eco15-gaz">345,00 €</div>
+                        </div>
+                        <div class="calc-stat">
+                            <div class="label">Coût annuel du thermostat</div>
+                            <div class="value" id="cout-annuel-gaz">118,80 €</div>
+                        </div>
+                        <div class="calc-stat green">
+                            <div class="label">Économie nette annuelle</div>
+                            <div class="value positive" id="eco-nette-gaz">226,20 €</div>
+                        </div>
+                        <div class="calc-stat blue">
+                            <div class="label">Économie nette mensuelle</div>
+                            <div class="value" id="eco-mens-gaz">18,85 €</div>
+                        </div>
+                    </div>
+
+                    <div class="calc-mensu">
+                        <div class="calc-mensu-box">
+                            <div class="label">Mensualisation sans Sowee</div>
+                            <div class="value" id="mensu-sans-gaz">191,67 €</div>
+                        </div>
+                        <div class="calc-mensu-box highlight">
+                            <div class="label">Mensualisation avec Sowee</div>
+                            <div class="value" id="mensu-avec-gaz">172,50 €</div>
+                        </div>
+                    </div>
+
+                    <div class="calc-prop" id="prop-gaz">
+                        <!-- généré en JS -->
+                    </div>
+
+                    <p class="calc-note">
+                        Kit de départ (Station) : <strong>9,90 €/mois</strong>. + <strong>1,50 €</strong> par tête thermostatique. Installation pro incluse.
+                    </p>
+                </div>
             </div>
         </section>
 
@@ -652,6 +981,130 @@
             const accordion = header.parentElement;
             accordion.classList.toggle('open');
         }
+
+        // ===== Calculette Sowee =====
+        let withEffacement = true;
+
+        function switchCalc(type) {
+            document.querySelectorAll('.calc-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.calc-panel').forEach(p => p.classList.remove('active'));
+            document.querySelector(`.calc-tab[data-calc="${type}"]`).classList.add('active');
+            document.getElementById(`calc-${type}`).classList.add('active');
+        }
+
+        function setEffacement(val) {
+            withEffacement = val;
+            document.getElementById('eff-oui').classList.toggle('active', val);
+            document.getElementById('eff-non').classList.toggle('active', !val);
+            calcElec();
+        }
+
+        function formatPrice(n) {
+            return n.toFixed(2).replace('.', ',');
+        }
+
+        function calcElec() {
+            let n = parseInt(document.getElementById('nb-radiateurs').value) || 1;
+            if (n < 1) n = 1;
+            const annuel = parseFloat(document.getElementById('annuel-elec').value) || 0;
+            const mes = document.getElementById('mes-elec').checked;
+
+            // Prix location
+            const base = withEffacement ? 6.90 : 9.90;
+            const extra = Math.max(0, n - 2) * 1.50;
+            const prixMois = base + extra;
+            const coutAnnuel = prixMois * 12;
+
+            // Économies
+            const eco15 = annuel * 0.15;
+            const ecoNette = eco15 - coutAnnuel;
+            const ecoMens = ecoNette / 12;
+
+            // Mensualisation
+            const mensuSans = annuel / 12;
+            const mensuAvec = mes ? (annuel * 0.90) / 12 : mensuSans;
+
+            // Affichage prix
+            document.getElementById('prix-elec').innerHTML = formatPrice(prixMois) + ' <span>€/mois</span>';
+            let detail = n + ' radiateur' + (n > 1 ? 's' : '');
+            detail += withEffacement ? ' avec Effacement' : ' sans Effacement';
+            document.getElementById('detail-elec').textContent = detail;
+
+            // Stats
+            document.getElementById('eco15-elec').textContent = formatPrice(eco15) + ' €';
+            document.getElementById('cout-annuel-elec').textContent = formatPrice(coutAnnuel) + ' €';
+            document.getElementById('eco-nette-elec').textContent = formatPrice(ecoNette) + ' €';
+            document.getElementById('eco-mens-elec').textContent = formatPrice(ecoMens) + ' €';
+
+            // Mensualisation
+            document.getElementById('mensu-sans-elec').textContent = formatPrice(mensuSans) + ' €';
+            document.getElementById('mensu-avec-elec').textContent = formatPrice(mensuAvec) + ' €';
+
+            // Proposition commerciale
+            let prop = `Je vous propose de compléter votre contrat avec le thermostat connecté Sowee by EDF. Ce service optionnel est le complément idéal à votre offre d’énergie.<br><br>`;
+            prop += `Grâce à ce thermostat connecté vous allez pouvoir réaliser <strong>jusqu’à 15 % d’économies</strong> avec un pilotage pièce par pièce de vos radiateurs électriques à distance et lorsque c’est nécessaire.<br>`;
+            prop += `Vous gagnerez en confort et vous pourrez gérer votre budget au plus près.<br>`;
+            prop += `Une installation rapide et gratuite par un professionnel. Avec la programmation de votre planning de chauffe au degré près vous pourrez économiser sur votre facture jusqu’à <span class="eco">${formatPrice(eco15)} € par an</span>.<br>`;
+            prop += `Déduction faite de la location du thermostat à <span class="cout">${formatPrice(prixMois)} € mensuelle</span>, c’est pour vous une économie annuelle qui pourrait atteindre <span class="eco">${formatPrice(ecoNette)} €</span>.<br>`;
+            prop += `<strong>Qu’en pensez-vous ?</strong>`;
+            if (mes) {
+                prop += `<span class="warning">L’AJUSTEMENT DE LA MENSUALITÉ N’EST POSSIBLE QU’EN MISE EN SERVICE : Cette proposition de mensualisation ajustée à −10 % reste prévisionnelle et fera l’objet d’une régularisation annuelle.<br>Si vous le souhaitez je peux appliquer une baisse de 10 % sur votre mensualité dès à présent qui serait de <strong>${formatPrice(mensuAvec)} €</strong> avec l’utilisation du thermostat.</span>`;
+            }
+            document.getElementById('prop-elec').innerHTML = prop;
+        }
+
+        function calcGaz() {
+            let n = parseInt(document.getElementById('nb-tetes').value) || 0;
+            if (n < 0) n = 0;
+            const annuel = parseFloat(document.getElementById('annuel-gaz').value) || 0;
+            const mes = document.getElementById('mes-gaz').checked;
+
+            // Prix location
+            const prixMois = 9.90 + n * 1.50;
+            const coutAnnuel = prixMois * 12;
+
+            // Économies
+            const eco15 = annuel * 0.15;
+            const ecoNette = eco15 - coutAnnuel;
+            const ecoMens = ecoNette / 12;
+
+            // Mensualisation
+            const mensuSans = annuel / 12;
+            const mensuAvec = mes ? (annuel * 0.90) / 12 : mensuSans;
+
+            // Affichage prix
+            document.getElementById('prix-gaz').innerHTML = formatPrice(prixMois) + ' <span>€/mois</span>';
+            let detail = 'Station gaz';
+            if (n === 0) detail += ' seule (sans tête supplémentaire)';
+            else detail += ' + ' + n + ' tête' + (n > 1 ? 's' : '') + ' thermostatique' + (n > 1 ? 's' : '');
+            document.getElementById('detail-gaz').textContent = detail;
+
+            // Stats
+            document.getElementById('eco15-gaz').textContent = formatPrice(eco15) + ' €';
+            document.getElementById('cout-annuel-gaz').textContent = formatPrice(coutAnnuel) + ' €';
+            document.getElementById('eco-nette-gaz').textContent = formatPrice(ecoNette) + ' €';
+            document.getElementById('eco-mens-gaz').textContent = formatPrice(ecoMens) + ' €';
+
+            // Mensualisation
+            document.getElementById('mensu-sans-gaz').textContent = formatPrice(mensuSans) + ' €';
+            document.getElementById('mensu-avec-gaz').textContent = formatPrice(mensuAvec) + ' €';
+
+            // Proposition commerciale
+            let prop = `Je vous propose de compléter votre contrat avec le thermostat connecté Sowee by EDF. Ce service optionnel est le complément idéal à votre offre d’énergie.<br><br>`;
+            prop += `Grâce à ce thermostat connecté, vous allez pouvoir réaliser <strong>jusqu’à 15 % d’économies</strong> en pilotant le chauffage de votre logement à distance et lorsque c’est nécessaire.<br>`;
+            prop += `Vous gagnerez en confort et pourrez gérer votre budget au plus près.<br>`;
+            prop += `Une installation rapide et gratuite par un professionnel. Avec la programmation de votre planning de chauffe au degré près vous pourrez économiser sur votre facture jusqu’à <span class="eco">${formatPrice(eco15)} € par an</span>.<br>`;
+            prop += `Déduction faite de la location de votre équipement <span class="cout">${formatPrice(prixMois)} € par mois</span>, c’est pour vous une économie annuelle qui pourrait atteindre <span class="eco">${formatPrice(ecoNette)} €</span>.<br>`;
+            prop += `<strong>Qu’en pensez-vous ?</strong>`;
+            if (mes) {
+                prop += `<span class="warning">L’AJUSTEMENT DE LA MENSUALITÉ N’EST POSSIBLE QU’EN MISE EN SERVICE : Cette proposition de mensualisation ajustée à −10 % reste prévisionnelle et fera l’objet d’une régularisation annuelle.<br>Si vous le souhaitez je peux appliquer une baisse de 10 % sur votre mensualité dès à présent qui serait de <strong>${formatPrice(mensuAvec)} €</strong> avec l’utilisation du thermostat.</span>`;
+            }
+            document.getElementById('prop-gaz').innerHTML = prop;
+        }
+
+        // Initialisation au chargement
+        calcElec();
+        calcGaz();
     </script>
 </body>
 </html>
