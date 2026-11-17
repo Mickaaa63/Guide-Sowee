@@ -628,12 +628,22 @@
 
                     <div class="calc-mensu">
                         <div class="calc-mensu-box">
-                            <div class="label">Mensualisation sans Sowee</div>
-                            <div class="value" id="mensu-sans-elec">250,00 €</div>
+                            <div class="label">Mensualisation sans Sowee<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">(sur 11 mois)</span></div>
+                            <div class="value" id="mensu-sans-elec">272,73 €</div>
                         </div>
                         <div class="calc-mensu-box highlight">
-                            <div class="label">Mensualisation avec Sowee</div>
-                            <div class="value" id="mensu-avec-elec">225,00 €</div>
+                            <div class="label">Mensualisation avec Sowee<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">(sur 11 mois)</span></div>
+                            <div class="value" id="mensu-avec-elec">245,45 €</div>
+                        </div>
+                    </div>
+                    <div class="calc-mensu" style="margin-top:10px;">
+                        <div class="calc-mensu-box">
+                            <div class="label">Total sur 11 mois<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">sans Sowee</span></div>
+                            <div class="value" id="total11-sans-elec" style="font-size:1.1rem;">3 000,00 €</div>
+                        </div>
+                        <div class="calc-mensu-box highlight">
+                            <div class="label">Total sur 11 mois<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">avec Sowee (−10 %)</span></div>
+                            <div class="value" id="total11-avec-elec" style="font-size:1.1rem;">2 700,00 €</div>
                         </div>
                     </div>
 
@@ -688,12 +698,22 @@
 
                     <div class="calc-mensu">
                         <div class="calc-mensu-box">
-                            <div class="label">Mensualisation sans Sowee</div>
-                            <div class="value" id="mensu-sans-gaz">191,67 €</div>
+                            <div class="label">Mensualisation sans Sowee<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">(sur 11 mois)</span></div>
+                            <div class="value" id="mensu-sans-gaz">209,09 €</div>
                         </div>
                         <div class="calc-mensu-box highlight">
-                            <div class="label">Mensualisation avec Sowee</div>
-                            <div class="value" id="mensu-avec-gaz">172,50 €</div>
+                            <div class="label">Mensualisation avec Sowee<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">(sur 11 mois)</span></div>
+                            <div class="value" id="mensu-avec-gaz">188,18 €</div>
+                        </div>
+                    </div>
+                    <div class="calc-mensu" style="margin-top:10px;">
+                        <div class="calc-mensu-box">
+                            <div class="label">Total sur 11 mois<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">sans Sowee</span></div>
+                            <div class="value" id="total11-sans-gaz" style="font-size:1.1rem;">2 300,00 €</div>
+                        </div>
+                        <div class="calc-mensu-box highlight">
+                            <div class="label">Total sur 11 mois<br><span style="font-size:0.75rem;font-weight:400;opacity:0.8;">avec Sowee (−10 %)</span></div>
+                            <div class="value" id="total11-avec-gaz" style="font-size:1.1rem;">2 070,00 €</div>
                         </div>
                     </div>
 
@@ -1054,9 +1074,11 @@
             const ecoNette = eco15 - coutAnnuel;
             const ecoMens = ecoNette / 12;
 
-            // Mensualisation
-            const mensuSans = annuel / 12;
-            const mensuAvec = mes ? (annuel * 0.90) / 12 : mensuSans;
+            // Mensualisation sur 11 mois (pratique EDF)
+            const mensuSans = annuel / 11;
+            const mensuAvec = mes ? (annuel * 0.90) / 11 : mensuSans;
+            const total11Sans = mensuSans * 11;
+            const total11Avec = mensuAvec * 11;
 
             // Affichage prix
             document.getElementById('prix-elec').innerHTML = formatPrice(prixMois) + ' <span>€/mois</span>';
@@ -1070,9 +1092,11 @@
             document.getElementById('eco-nette-elec').textContent = formatPrice(ecoNette) + ' €';
             document.getElementById('eco-mens-elec').textContent = formatPrice(ecoMens) + ' €';
 
-            // Mensualisation
+            // Mensualisation + totaux 11 mois
             document.getElementById('mensu-sans-elec').textContent = formatPrice(mensuSans) + ' €';
             document.getElementById('mensu-avec-elec').textContent = formatPrice(mensuAvec) + ' €';
+            document.getElementById('total11-sans-elec').textContent = formatPrice(total11Sans) + ' €';
+            document.getElementById('total11-avec-elec').textContent = formatPrice(total11Avec) + ' €';
 
             // Proposition commerciale
             let prop = `Je vous propose de compléter votre contrat avec le thermostat connecté Sowee by EDF. Ce service optionnel est le complément idéal à votre offre d’énergie.<br><br>`;
@@ -1102,9 +1126,11 @@
             const ecoNette = eco15 - coutAnnuel;
             const ecoMens = ecoNette / 12;
 
-            // Mensualisation
-            const mensuSans = annuel / 12;
-            const mensuAvec = mes ? (annuel * 0.90) / 12 : mensuSans;
+            // Mensualisation sur 11 mois (pratique EDF)
+            const mensuSans = annuel / 11;
+            const mensuAvec = mes ? (annuel * 0.90) / 11 : mensuSans;
+            const total11Sans = mensuSans * 11;
+            const total11Avec = mensuAvec * 11;
 
             // Affichage prix
             document.getElementById('prix-gaz').innerHTML = formatPrice(prixMois) + ' <span>€/mois</span>';
@@ -1119,9 +1145,11 @@
             document.getElementById('eco-nette-gaz').textContent = formatPrice(ecoNette) + ' €';
             document.getElementById('eco-mens-gaz').textContent = formatPrice(ecoMens) + ' €';
 
-            // Mensualisation
+            // Mensualisation + totaux 11 mois
             document.getElementById('mensu-sans-gaz').textContent = formatPrice(mensuSans) + ' €';
             document.getElementById('mensu-avec-gaz').textContent = formatPrice(mensuAvec) + ' €';
+            document.getElementById('total11-sans-gaz').textContent = formatPrice(total11Sans) + ' €';
+            document.getElementById('total11-avec-gaz').textContent = formatPrice(total11Avec) + ' €';
 
             // Proposition commerciale
             let prop = `Je vous propose de compléter votre contrat avec le thermostat connecté Sowee by EDF. Ce service optionnel est le complément idéal à votre offre d’énergie.<br><br>`;
